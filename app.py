@@ -1,7 +1,10 @@
 from flask import Flask, render_template
+from config import Config
 import os
 
 app = Flask(__name__)
+
+app.config.from_object(Config)
 
 # Login page route
 @app.route('/')
