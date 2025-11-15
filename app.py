@@ -1,10 +1,14 @@
 from flask import Flask, render_template
 from config import Config
+from models.db import db
+
 import os
 
 app = Flask(__name__)
 
 app.config.from_object(Config)
+
+db.init_app(app)
 
 # Login page route
 @app.route('/')
