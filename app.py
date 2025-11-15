@@ -1,15 +1,21 @@
 from flask import Flask, render_template
 from config import Config
+<<<<<<< HEAD
 from models.db import db
 
+=======
+>>>>>>> acdde8ebb56e77efbcbb4f2aeebf0449466726f4
 import os
 
 app = Flask(__name__)
 
 app.config.from_object(Config)
 
+<<<<<<< HEAD
 db.init_app(app)
 
+=======
+>>>>>>> acdde8ebb56e77efbcbb4f2aeebf0449466726f4
 # Login page route
 @app.route('/')
 def login():
